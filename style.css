@@ -1,0 +1,162 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+.con {
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.con span {
+    position: absolute;
+    left: 0 ;
+    width: 32px;
+    height: 6px;
+    background: #2c4766;
+    border-radius:0 50px;
+    transform-origin: 130px;
+    transform: scale(2) rotate(calc(var(--i) * (580deg/50)));
+    animation: animateBlink .1s linear infinite;
+    animation-delay: calc(var(--i) * (3s /50));
+}
+
+@keyframes animateBlink {
+    0% {
+        background: #0ef;
+    }
+
+    25% {
+        background: #2c4766;
+    }
+}
+
+.navbar {
+ position: absolute;
+ width: 400px;
+    /* background: red; */
+}
+
+.navbar form {
+    width: 100%;
+    padding: 0 50px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #0ef;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    margin: 25px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #2c4766;
+    outline: none;
+    color: #fff;
+    padding: 0 20px;
+
+    border-radius: 40px;
+    transition: .5s ease;
+}
+
+.input-box input:focus,
+.input-box input:valid {
+    border-color: #0ef;
+    
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left:  20px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: white;
+    pointer-events: none;
+    transition: .5s ease;
+
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: 1px;
+    font-size: .8rem;
+    color:#0ef ;
+    padding: 0 6px;
+    background: #2c4766;
+    border-radius: 0  40%;
+
+}
+
+.forgot-pass {
+    margin: -15px 0 10px;
+    text-align: center;
+}
+
+.forgot-pass a {
+     font-size: .85em;
+     color: #fff;
+     text-decoration: none;
+}
+
+.forgot-pass a:hover {
+    text-decoration: underline;
+    color: red;
+    transition: .5s;
+}
+
+button{
+    width: 100%;
+    height: 45px;
+    background: #0ef;
+    border: none;
+    outline: none;
+    border-radius: 45px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #2c4766;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #0d86b1;
+    color: #fff;
+    transition: .5s;
+}
+.signup-link {
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.signup-link a {
+    font-size: 23px;
+    color: aqua;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+    color: red;
+    transition: .5s;
+}
